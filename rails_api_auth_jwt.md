@@ -41,9 +41,13 @@ updated_at: datetime
 ## 使用するgem
 ```
 gem 'bcrypt', '~> 3.1.7'　　#DBに保存するパスワードを暗号化
-
+gem 'sorcery'
 gem 'jwt'　　　　　　　　　　　#jwt認証に必要
 ```
+
+- `rails g sorcery:install`するとUserテーブルが生成されてしまうので注意
+- `rails g sorcery:install --model User`で対応→usersテーブルが生成される
+https://github.com/Sorcery/sorcery/pull/274
 
 ## routes
 ```
